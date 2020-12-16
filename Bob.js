@@ -1,7 +1,7 @@
 class Bob{
-  constructor(x,y,diameter){
+  constructor(x,y,radius){
       this.body= Matter.Bodies.circle(x,y,radius, {isStatic:false, restitution:1, friction:0, density:1.2});
-      this.diameter=diameter;
+      this.radius=radius;
       World.add(world, this.body)
   }
 
@@ -12,7 +12,7 @@ class Bob{
       fill("blue");
       stroke("black");
       var pos=this.body.position
-      ellipse(pos.x,pos.y, this.radius*2,this.radius*2);
+      ellipse(pos.x,pos.y, this.radius,this.radius);
       pop();
 
   }
